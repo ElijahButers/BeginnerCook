@@ -108,4 +108,8 @@ class ViewController: UIViewController {
     herbDetails.herb = selectedHerb
     present(herbDetails, animated: true, completion: nil)
   }
+    
+    extension ViewController: UIViewControllerTransitioningDelegate {
+        
+    }
 }
