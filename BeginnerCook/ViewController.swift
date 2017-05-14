@@ -106,6 +106,7 @@ class ViewController: UIViewController {
     //present details view controller
     let herbDetails = storyboard!.instantiateViewController(withIdentifier: "HerbDetailsViewController") as! HerbDetailsViewController
     herbDetails.herb = selectedHerb
+    herbDetails.transitioningDelegate = self
     present(herbDetails, animated: true, completion: nil)
   }
     
