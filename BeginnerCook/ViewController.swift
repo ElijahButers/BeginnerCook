@@ -29,6 +29,7 @@ class ViewController: UIViewController {
   @IBOutlet var listView: UIScrollView!
   @IBOutlet var bgImage: UIImageView!
   var selectedImage: UIImageView?
+    let transition = PopAnimator()
   
   //MARK: UIViewController
   
