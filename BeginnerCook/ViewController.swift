@@ -116,5 +116,9 @@ class ViewController: UIViewController {
         func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
             return transition
         }
+        
+        func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+            return nil
+        }
     }
 }
