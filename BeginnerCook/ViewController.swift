@@ -113,5 +113,8 @@ class ViewController: UIViewController {
     
     extension ViewController: UIViewControllerTransitioningDelegate {
         
+        func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+            return transition
+        }
     }
 }
