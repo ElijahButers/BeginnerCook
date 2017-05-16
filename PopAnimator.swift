@@ -21,6 +21,8 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
+        let container = transitionContext.containerView
+        let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
     }
 
 }
