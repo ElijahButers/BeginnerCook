@@ -110,7 +110,8 @@ class ViewController: UIViewController {
     herbDetails.transitioningDelegate = self
     present(herbDetails, animated: true, completion: nil)
   }
-    
+}
+
     extension ViewController: UIViewControllerTransitioningDelegate {
         
         func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
@@ -119,6 +120,5 @@ class ViewController: UIViewController {
         
         func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
             return nil
-        }
     }
 }
