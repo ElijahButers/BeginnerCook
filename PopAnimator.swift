@@ -29,5 +29,11 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         let herbView = presenting ? toView : transitionContext.view(forKey: UITransitionContextViewKey.from)!
         
+        let initialFrame = presenting ? originName : herbView.frame
+        let finalFrame = presenting ? herbView.frame : originName
+        
+        let xScaleFactor = presenting ? initialFrame.width / finalFrame.width : finalFrame.width / initialFrame.width
+        let yScaleFactor = presenting ? initialFrame.height / finalFrame.height : finalFrame.height / initialFrame.height
+        
     }
 }
