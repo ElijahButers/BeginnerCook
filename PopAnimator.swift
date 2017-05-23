@@ -35,5 +35,13 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let xScaleFactor = presenting ? initialFrame.width / finalFrame.width : finalFrame.width / initialFrame.width
         let yScaleFactor = presenting ? initialFrame.height / finalFrame.height : finalFrame.height / initialFrame.height
         
+        let scaleTransform = CGAffineTransform(scaleX: xScaleFactor, y: yScaleFactor)
+        
+        if presenting {
+            herbView.transform = scaleTransform
+            herbView.center = CGPoint(x: initialFrame.midX, y: initialFrame.midY)
+            herbView.clipsToBounds = true
+        }
+        
     }
 }
