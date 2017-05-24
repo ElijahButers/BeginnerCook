@@ -41,6 +41,9 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
         
         containerView.addSubview(toView)
+        containerView.bringSubview(toFront: herbView)
+        
+        
         
     }
 }
