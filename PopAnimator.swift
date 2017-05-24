@@ -43,7 +43,11 @@ class PopAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         containerView.addSubview(toView)
         containerView.bringSubview(toFront: herbView)
         
-        
-        
+        UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, options: [], animations: {
+            herbView.transform = self.presenting ? CGAffineTransform.identity : scaleTransform
+            herbView.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
+        }, completion: {_ in
+            transitionContext.completeTransition(true)
+        })
     }
 }
