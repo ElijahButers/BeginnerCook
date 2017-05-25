@@ -115,6 +115,10 @@ class ViewController: UIViewController {
     extension ViewController: UIViewControllerTransitioningDelegate {
         
         func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+            
+            transition.originName = selectedImage!.superview!.convert(selectedImage!.frame, to: nil)
+            transition.presenting = true
+            selectedImage!.isHidden = true
             return transition
         }
         
