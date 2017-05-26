@@ -36,6 +36,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    transition.dismissCompletion = {
+        self.selectedImage!.isHidden = false
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
