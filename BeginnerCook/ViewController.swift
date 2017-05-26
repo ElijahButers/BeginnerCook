@@ -123,6 +123,8 @@ class ViewController: UIViewController {
         }
         
         func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+            
+            transition.presenting = false
             return nil
     }
 }
