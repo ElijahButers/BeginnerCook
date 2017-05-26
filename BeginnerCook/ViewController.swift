@@ -114,7 +114,7 @@ class ViewController: UIViewController {
 
     extension ViewController: UIViewControllerTransitioningDelegate {
         
-        func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
             
             transition.originName = selectedImage!.superview!.convert(selectedImage!.frame, to: nil)
             transition.presenting = true
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
             return transition
         }
         
-        func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
             return nil
     }
 }
